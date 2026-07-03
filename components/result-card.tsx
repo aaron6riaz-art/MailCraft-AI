@@ -31,7 +31,7 @@ function EmptyState() {
       </span>
       <p className="text-sm font-medium text-ink">Your email will appear here</p>
       <p className="max-w-xs text-sm text-muted">
-        Fill in the form and click "Generate Email" to see an AI-drafted email in seconds.
+        Fill in the form and click &ldquo;Generate Email&rdquo; to see an AI-drafted email in seconds.
       </p>
     </div>
   );
@@ -43,7 +43,7 @@ function ErrorState({ message, onRetry }: { message?: string; onRetry: () => voi
       <span className="flex h-12 w-12 items-center justify-center rounded-full bg-red-50 text-red-500 dark:bg-red-950">
         <AlertTriangle className="h-5 w-5" />
       </span>
-      <p className="text-sm font-medium text-ink">Couldn't generate your email</p>
+      <p className="text-sm font-medium text-ink">Couldn&apos;t generate your email</p>
       <p className="max-w-xs text-sm text-muted">
         {message ?? "Something went wrong. Please try again."}
       </p>
