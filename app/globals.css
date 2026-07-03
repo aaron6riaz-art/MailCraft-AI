@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+  Design tokens — MailCraft AI
+  Light: white canvas, light-gray surface, blue brand accent (per brief).
+  Dark: deep navy canvas, keeps the same blue accent for continuity.
+*/
+:root {
+  --canvas: 0 0% 100%;
+  --surface: 220 20% 97%;
+  --ink: 222 47% 11%;
+  --muted: 215 16% 47%;
+  --brand: 221 83% 53%;
+  --brand-hover: 221 83% 45%;
+  --brand-subtle: 221 91% 95%;
+  --border: 220 13% 91%;
+}
+
+.dark {
+  --canvas: 222 47% 6%;
+  --surface: 222 39% 10%;
+  --ink: 210 40% 96%;
+  --muted: 215 16% 65%;
+  --brand: 217 91% 60%;
+  --brand-hover: 217 91% 68%;
+  --brand-subtle: 217 60% 18%;
+  --border: 216 28% 18%;
+}
+
+* {
+  border-color: hsl(var(--border));
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: hsl(var(--canvas));
+  color: hsl(var(--ink));
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+}
+
+:focus-visible {
+  outline: 2px solid hsl(var(--brand));
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.typing-caret {
+  display: inline-block;
+  width: 2px;
+  margin-left: 2px;
+  background: hsl(var(--brand));
+}
